@@ -7,6 +7,7 @@ import {
   GraduationCap,
   ChevronDown,
   StarsIcon,
+  Gauge,
 } from "lucide-react";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
@@ -25,14 +26,18 @@ export default async function Header() {
   return (
     <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/">
+        <Link href="/" className="flex items-center gap-2">
           <Image
-            src={"/logo.png"}
-            alt="Sensai Logo"
+            src={"/sarthi1.png"}
+            alt="SarthiAi Logo"
             width={200}
-            height={60}
+            height={200}
             className="h-12 py-1 w-auto object-contain"
           />
+          <h1 className="hidden md:block text-4xl
+           font-sans
+           font-bold bg-gradient-to-tr text-transparent bg-clip-text from-sky-400
+           via-gray-200 to-sky-500">SARTHI AI</h1>
         </Link>
 
         {/* Action Buttons */}
@@ -61,6 +66,12 @@ export default async function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuItem asChild>
+                  <Link href="/check-ats-score" className="flex items-center gap-2">
+                    <Gauge className="h-4 w-4" />
+                    Resume Analyzer
+                  </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/resume" className="flex items-center gap-2">
                     <FileText className="h-4 w-4" />

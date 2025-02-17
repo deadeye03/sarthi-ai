@@ -88,7 +88,7 @@ export default function ResumeBuilder({ initialContent }) {
     if (contactInfo.mobile) parts.push(`📱 ${contactInfo.mobile}`);
     if (contactInfo.linkedin)
       parts.push(`💼 [LinkedIn](${contactInfo.linkedin})`);
-    if (contactInfo.twitter) parts.push(`🐦 [Twitter](${contactInfo.twitter})`);
+    if (contactInfo.portfolio) parts.push(`🐦 [Portfolio](${contactInfo.portfolio})`);
 
     return parts.length > 0
       ? `## <div align="center">${user.fullName}</div>
@@ -147,7 +147,7 @@ export default function ResumeBuilder({ initialContent }) {
   };
 
   return (
-    <div data-color-mode="light" className="space-y-4">
+    <div data-color-mode="light" className="space-y-4 p-4">
       <div className="flex flex-col md:flex-row justify-between items-center gap-2">
         <h1 className="font-bold gradient-title text-5xl md:text-6xl">
           Resume Builder
@@ -240,16 +240,16 @@ export default function ResumeBuilder({ initialContent }) {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium">
-                    Twitter/X Profile
+                    Portfolio Link
                   </label>
                   <Input
-                    {...register("contactInfo.twitter")}
+                    {...register("contactInfo.portfolio")}
                     type="url"
-                    placeholder="https://twitter.com/your-handle"
+                    placeholder="https://porftolio.com/"
                   />
-                  {errors.contactInfo?.twitter && (
+                  {errors.contactInfo?.portfolio && (
                     <p className="text-sm text-red-500">
-                      {errors.contactInfo.twitter.message}
+                      {errors.contactInfo.portfolio.message}
                     </p>
                   )}
                 </div>
