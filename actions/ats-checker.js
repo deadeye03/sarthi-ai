@@ -120,7 +120,7 @@ JSON Output Format:
             prompt,
         ]);
         const text = result.response.text();
-        console.log('Raw text:', text);
+        // console.log('Raw text:', text);
 
         // Extract JSON from the response
         const jsonMatch = text.match(/\{[\s\S]*\}/);

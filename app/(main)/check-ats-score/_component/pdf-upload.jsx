@@ -13,7 +13,7 @@ import { toast } from 'sonner';
 import { motion } from "framer-motion"
 const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
 const publicKey = process.env.NEXT_PUBLIC_IMAGEKIT_KEY;
-console.log(publicKey)
+
 const authenticator = async () => {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/upload-auth`);
@@ -50,11 +50,10 @@ function PdfUpload() {
   };
 
   const onSuccess = async (res) => {
-    console.log("Success", res);
+    // console.log("Success", res);
     setProgress(100)
     setStatus("Scanning PDF...")
     setImgPath(res.filePath)
-    console.log('file path is ',res.filePath,imgPath)
     const response = await atsChecker(res.url);
     if (!response) {
       setIsLoading(false);
@@ -73,7 +72,7 @@ function PdfUpload() {
   };
 
   const onUploadProgress = progress => {
-    console.log("Progress", progress);
+    // console.log("Progress", progress);
     setStatus("Processing PDF...")
     setProgress(50)
 
@@ -81,7 +80,7 @@ function PdfUpload() {
 
   const onUploadStart = evt => {
     setIsLoading(true)
-    console.log("Start", evt);
+    // console.log("Start", evt);
   };
   return (
     <div className='upload'>
