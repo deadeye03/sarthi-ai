@@ -96,7 +96,7 @@ export default function ResumeAnalysis({ data }) {
                                 <li key={index} className="text-sm">
                                     
 
-                                    <span className="font-bold text-xl mr-1 text-teal-300">{tip.category}:</span> {tip.suggestion}
+                                    <span className="font-bold text-lg mr-1 text-pink-300">{tip.category}:</span> {tip.suggestion}
                                     {/* </ReactMarkdown> */}
                                 </li>
                             ))}
@@ -112,20 +112,20 @@ export default function ResumeAnalysis({ data }) {
                             <h2 className="text-xl font-semibold">Skills Anlaysis</h2>
                         </CardTitle>
                     </CardHeader>
-                    <CardContent className='flex justify-between items-center'>
+                    <CardContent className='flex justify-between '>
                         <ul className="list-disc list-inside">
                             <h2 className="text-xl font-semibold gradient-title">Hard Skills </h2>
-                            {data?.skill_analysis?.hard_skills?.map((skill, index) => (
+                            {data.skills_analysis?.hard_skills?.map((skill, index) => (
                                 <li key={skill} className="text-sm">
-                                    <span className="font-bold text-xl mr-1 text-teal-300">{skill} </span> 
+                                    <span className="font-bold  mr-1 text-teal-300">{skill} </span> 
                                 </li>
                             ))}
                         </ul>
                         <ul className="list-disc list-inside">
                             <h2 className="text-xl font-semibold gradient-title">Soft Skills </h2>
-                            {data?.skill_analysis?.soft_skills?.map((skill, index) => (
-                                <li key={skill} className="text-sm">
-                                    <span className="font-bold text-xl mr-1 text-red-500">{skill} </span> 
+                            {data.skills_analysis?.soft_skills?.map((skill, index) => (
+                                <li key={skill} className="text-sm min-w-max">
+                                    <span className="font-bold mr-1 text-cyan-500">{skill} </span> 
                                 </li>
                             ))}
                         </ul>
@@ -141,7 +141,7 @@ export default function ResumeAnalysis({ data }) {
                             <ul className="list-disc list-inside">
                                 {data?.formatting_issues?.map((issue, index) => (
                                     <li key={issue} className="text-sm">
-                                        <span className="font-bold text-xl mr-1 text-red-500">{issue} </span> 
+                                        <span className="font-bold text-lg mr-1 text-purple-500">{issue} </span> 
                                     </li>
                             ))}
                             </ul>
