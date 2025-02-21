@@ -239,7 +239,7 @@ export default function HeroSection({
         <div className="hero-image-wrapper -mt-24 md:-mt-10 overflow-hidden p-1">
           <div ref={imageRef} className="hero-image">
             <Image
-              src="/banner.jpeg"
+              src="/banner4.webp"
               width={1280}
               height={720}
               alt="Dashboard Preview"
