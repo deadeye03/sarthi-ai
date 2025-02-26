@@ -15,10 +15,48 @@ import Providers from "@/components/ProgressBarProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AI Career Coach",
-  description: "AI Career coach for professional success with SarthiAi .",
+  title: "SarthiAi - Your AI Career Coach for Professional Success",
+  description:
+    "Boost your career with SarthiAi, the leading AI-powered career coach. Get personalized guidance, professional growth strategies, and achieve success in your career journey.",
   icons: [{ rel: "icon", url: "/sarthi1.png" }],
+  keywords: [
+    "SarthiAi",
+    "ats score",
+    "AI career coach",
+    "professional success",
+    "career growth",
+    "job guidance",
+    "ats score checker",
+    "resume builder",
+    "career development",
+    "AI coaching",
+  ],
+  openGraph: {
+    title: "SarthiAi - AI Career Coach for Professional Success",
+    description:
+      "Achieve your career goals with SarthiAi's personalized AI-driven coaching and career development strategies.",
+    url: "https://sarthi-ai.click",
+    siteName: "SarthiAi",
+    // images: [
+    //   {
+    //     url: "/og-image.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "SarthiAi - AI Career Coach",
+    //   },
+    // ],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://sarthi-ai.click",
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
@@ -40,13 +78,13 @@ export default function RootLayout({ children }) {
           >
 
             <Header />
-              <main className="min-h-screen">
-            <Providers>
+            <main className="min-h-screen">
+              <Providers>
                 {children}
 
 
-            </Providers>
-              </main>
+              </Providers>
+            </main>
             <Analytics />
             <SpeedInsights />
             <Toaster richColors />
