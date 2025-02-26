@@ -173,6 +173,7 @@ const OnboardingForm = ({ industries }) => {
                 placeholder="e.g., Python, JavaScript, Project Management"
                 {...register("skills")}
               />
+              
               <p className="text-sm text-muted-foreground">
                 Separate multiple skills with commas
               </p>
